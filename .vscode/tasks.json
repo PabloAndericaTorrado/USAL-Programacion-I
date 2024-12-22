@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "echo",
+        "type": "shell",
+        "command": "echo Hello"
+      },
+      {
+        "label": "Compilar C",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}/${fileBasenameNoExtension}"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Compilar el archivo de C con depuración"
+      }
+    ]
+  }
+  
